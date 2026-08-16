@@ -1,11 +1,31 @@
-# Text to Speech and Speech to Text Models
+# Speech Models
 
-## Introduction
+This folder contains the Docker-based IBM Watson speech services used by the voice chat application in this repo.
 
-This repository contains self-serve text-to-speech (TTS) and speech-to-text (STT) models. These models are built and offered by IBM Watson. To enable usage of these models please retrieve [**Entitlement Keys**](https://myibm.ibm.com/products-services/containerlibrary) using your IBMid.
+## Included services
 
-## Usage
+- [stt](stt) – Speech-to-Text model container
+- [tts](tts) – Text-to-Speech model container
 
-Each model has its own set of instructions for usage. Please refer to the `README` file within each model's directory for more information.
+## Project role
 
-*Please Note: these images take a while to load. It can take upto 10 minutes on the first run to pull everything.*
+These model services are used to support the voice assistant app by enabling:
+
+- speech recognition from user audio input
+- speech synthesis for AI responses
+
+## Notes
+
+These containers are based on IBM Watson Speech services and require the proper IBM entitlement configuration before they can be built or run locally.
+
+## Typical workflow
+
+1. Build and start the STT container.
+2. Build and start the TTS container.
+3. Connect the application server to these local endpoints.
+4. Use the voice assistant app for real-time interaction.
+
+## Useful references
+
+- [stt/README.md](stt/README.md)
+- [tts/README.md](tts/README.md)
